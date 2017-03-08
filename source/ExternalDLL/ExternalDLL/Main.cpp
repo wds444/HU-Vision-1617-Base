@@ -20,7 +20,7 @@ int main(int argc, char * argv[]) {
 
 
 	ImageIO::debugFolder = "D:\\Users\\Rolf\\Downloads\\FaceMinMin";
-	ImageIO::isInDebugMode = true; //If set to false the ImageIO class will skip any image save function calls
+	ImageIO::isInDebugMode = false; //If set to false the ImageIO class will skip any image save function calls
 
 
 
