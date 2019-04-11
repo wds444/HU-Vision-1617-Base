@@ -6,7 +6,7 @@
 
 #pragma once
 class Image {
-private:
+protected:
 	int width;
 	int height;
 

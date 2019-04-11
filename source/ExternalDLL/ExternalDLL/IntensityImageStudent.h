@@ -7,16 +7,22 @@
 #pragma once
 #include "IntensityImage.h"
 #include "RGBImageStudent.h"
+#include <vector>
 
+//! Student implementation of a class representing an IntensityImage
+/*!
+ *	\author Nicky van Steensel van der Aa
+ */
 class IntensityImageStudent : public IntensityImage {
 public:
-	IntensityImageStudent stepToIntensityImage(const RGBImage &other);
 	IntensityImageStudent();
-	IntensityImageStudent(const IntensityImageStudent &other);
-	IntensityImageStudent(const int width, const int height);
 	~IntensityImageStudent();
-	std::vector<std::vector<Intensity>> pixelstorage;
-	void set(int width, int height);
+
+	IntensityImageStudent(const IntensityImage &other);
+	IntensityImageStudent(const RGBImage &RGB);
+	IntensityImageStudent(const int width, const int height);
+
+	void set(const int width, const int height);
 	void set(const IntensityImageStudent &other);
 
 	void setPixel(int x, int y, Intensity pixel);
@@ -24,4 +30,11 @@ public:
 
 	Intensity getPixel(int x, int y) const;
 	Intensity getPixel(int i) const;
+private:
+	std::vector<Intensity> intensityVector;
+
+	//Bron van waardes in implementatieplan
+	const float redConversionGrade = 0.3000f;
+	const float greenConversionGrade = 0.5900f;
+	const float blueConversionGrade = 1.0f - redConversionGrade - greenConversionGrade;
 };
