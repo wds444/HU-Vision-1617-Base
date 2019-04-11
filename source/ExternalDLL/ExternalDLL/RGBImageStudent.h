@@ -9,12 +9,11 @@
 #include <vector>
 class RGBImageStudent : public RGBImage {
 public:
-
 	RGBImageStudent();
 	RGBImageStudent(const RGBImageStudent &other);
 	RGBImageStudent(const int width, const int height);
 	~RGBImageStudent();
-	std::vector<std::vector<RGB>> pixelstorage;
+
 	void set(const int width, const int height);
 	void set(const RGBImageStudent &other);
 
@@ -23,4 +22,7 @@ public:
 
 	RGB getPixel(int x, int y) const;
 	RGB getPixel(int i) const;
+
+private:
+	std::vector<RGB> imageVector;
 };
