@@ -342,29 +342,7 @@ bool DLLExecution::executeLocalizationStep5(bool student) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//to intensity
 
 
 bool DLLExecution::executePreProcessingStep1(bool student) {
@@ -378,6 +356,8 @@ bool DLLExecution::executePreProcessingStep1(bool student) {
 	}
 	return resultPreProcessingStep1 != NULL;
 }
+
+
 
 bool DLLExecution::executePreProcessingStep2(bool student) {
 	if (!resultPreProcessingStep1) {

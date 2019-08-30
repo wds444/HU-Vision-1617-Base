@@ -17,6 +17,30 @@ struct RGB {
 	unsigned char b;
 	unsigned char g;
 	unsigned char r;
+
+	unsigned char getSmallest() {
+		unsigned char min = r;
+		if (g < min) {
+			min = g;
+		}
+		if (b < min) {
+			min = b;
+		}
+		return min;
+	}
+
+	// is het de bedoeling dat ik deze file ook edit? zo niet, have a free pun :P
+
+	unsigned char getBiggest() {//Gheghe, biggus (dickus)
+		unsigned char max = r;
+		if (g > max) {
+			max = g;
+		}
+		if (b > max) {
+			max = b;
+		}
+		return max;
+	}
 };
 
 typedef unsigned char Intensity;
