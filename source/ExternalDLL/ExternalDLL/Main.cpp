@@ -4,7 +4,7 @@
 * Proprietary and confidential
 */
 
-#include <iostream> //std::cout
+#include <iostream> 
 #include "ImageIO.h" //Image load and save functionality
 #include "HereBeDragons.h"
 #include "ImageFactory.h"
@@ -13,7 +13,7 @@
 //used for writing test results to csv file
 #include <fstream>
 
-#include <chrono> //used for testing student implementation
+#include <chrono> //used for testing implementations
 
 void drawFeatureDebugImage(IntensityImage &image, FeatureMap &features);
 bool executeSteps(DLLExecution * executor);
@@ -21,7 +21,7 @@ bool executeSteps(DLLExecution * executor);
 int main(int argc, char * argv[]) {
 
 	//for loop used to get average time values
-	//for (int i = 1; i <= 10; i = i + 1) { 
+	for (int i = 1; i <= 10; i = i + 1) { 
 
 		ImageFactory::setImplementation(ImageFactory::DEFAULT);
 		//ImageFactory::setImplementation(ImageFactory::STUDENT);
@@ -34,7 +34,7 @@ int main(int argc, char * argv[]) {
 
 
 		RGBImage * input = ImageFactory::newRGBImage();
-		if (!ImageIO::loadImage("D:\\School\\Vision-testset\\male-1.png", *input)) {
+		if (!ImageIO::loadImage("D:\\School\\Vision-testset\\male-2.png", *input)) {
 			std::cout << "Image could not be loaded!" << std::endl;
 			system("pause");
 			return 0;
@@ -55,7 +55,7 @@ int main(int argc, char * argv[]) {
 		}
 
 		delete executor;
-	//}; // end of for loop
+	} // end of for loop
 	system("pause");
 	return 1;
 }

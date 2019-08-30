@@ -20,21 +20,21 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 
 		
 			// average method
-			greyScaleImage->setPixel(y, x, (RGBpixel.b + RGBpixel.g + RGBpixel.r) / 3);
+			greyScaleImage->setPixel(x, y, (RGBpixel.b + RGBpixel.g + RGBpixel.r) / 3);
 		
 
-		/*
+		/* //deze is niet geschikt voor gezichtsdetectie
 			// lightness method takes the highest R, G, or B value and adds this with the lowest value. 
 			unsigned char maxColorValue = RGBpixel.getBiggest();
 			unsigned char minColorValue = RGBpixel.getSmallest();
-			greyScaleImage->setPixel(y, x, (maxColorValue + minColorValue) / 2);
+			greyScaleImage->setPixel(x, y, (maxColorValue + minColorValue) / 2);
 		*/
 
-		/*
+		
 			//luma / luminance
-			Intensity luminanceValue = (RGBpixel.b * 0.11) + (RGBpixel.g * 0.59) + (RGBpixel.r * 0.3);
-			greyScaleImage->setPixel(y, x, luminanceValue);
-		*/
+		//	Intensity luminanceValue = (RGBpixel.b * 0.11) + (RGBpixel.g * 0.59) + (RGBpixel.r * 0.3);
+		//	greyScaleImage->setPixel(x, y, luminanceValue);
+		
 
 
 		}
