@@ -20,7 +20,7 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 
 		
 			// average method
-			greyScaleImage->setPixel(x, y, (RGBpixel.b + RGBpixel.g + RGBpixel.r) / 3);
+			//greyScaleImage->setPixel(x, y, (RGBpixel.b + RGBpixel.g + RGBpixel.r) / 3);
 		
 
 		/* //deze is niet geschikt voor gezichtsdetectie
@@ -32,8 +32,8 @@ IntensityImage * StudentPreProcessing::stepToIntensityImage(const RGBImage &imag
 
 		
 			//luma / luminance
-		//	Intensity luminanceValue = (RGBpixel.b * 0.11) + (RGBpixel.g * 0.59) + (RGBpixel.r * 0.3);
-		//	greyScaleImage->setPixel(x, y, luminanceValue);
+			Intensity luminanceValue = (RGBpixel.b * 0.11) + (RGBpixel.g * 0.59) + (RGBpixel.r * 0.3);
+			greyScaleImage->setPixel(x, y, luminanceValue);
 		
 
 
